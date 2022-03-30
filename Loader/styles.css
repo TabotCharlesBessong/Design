@@ -1,0 +1,343 @@
+<style>
+
+      * {
+
+        padding: 0;
+
+        margin: 0;
+
+        -webkit-box-sizing: border-box;
+
+                box-sizing: border-box;
+
+        font-family: "Poppins", sans-serif;
+
+        -webkit-tap-highlight-color: transparent;
+
+      }
+
+      body {
+
+        background-color: #f7f8fb;
+
+        font-size: 16px;
+
+      }
+
+      #box {
+
+        display: none;
+
+      }
+
+      #loader {
+
+        background-color: #ffffff;
+
+        height: 250px;
+
+        width: 250px;
+
+        position: absolute;
+
+        position: absolute;
+
+        -webkit-transform: translate(-50%, -50%);
+
+        -ms-transform: translate(-50%, -50%);
+
+        transform: translate(-50%, -50%);
+
+        left: 50%;
+
+        top: 50%;
+
+        display: -ms-grid;
+
+        display: grid;
+
+        place-items: center;
+
+        border-radius: 5px;
+
+      }
+
+      #loader:after {
+
+        content: "";
+
+        position: absolute;
+
+        height: 180px;
+
+        width: 180px;
+
+        border: 15px solid #a0a0a0;
+
+        border-top-color: #4249ed;
+
+        border-radius: 50%;
+
+        -webkit-animation: spin 1s linear infinite;
+
+        animation: spin 1s linear infinite;
+
+      }
+
+      @-webkit-keyframes spin {
+
+        100% {
+
+          -webkit-transform: rotate(360deg);
+
+          transform: rotate(360deg);
+
+        }
+
+      }
+
+      @keyframes spin {
+
+        100% {
+
+          -webkit-transform: rotate(360deg);
+
+          transform: rotate(360deg);
+
+        }
+
+      }
+
+      .heading-primary {
+
+        background-color: #4249ed;
+
+        text-align: center;
+
+        margin-top: 0;
+
+        padding-top: 0.25em;
+
+        color: white;
+
+        font-size: 2.8em;
+
+        letter-spacing: 0.5px;
+
+        font-weight: 600;
+
+        line-height: 1em;
+
+        text-transform: uppercase;
+
+      }
+
+      .heading-primary > span {
+
+        color: #0f1730;
+
+        font-size: 0.5em;
+
+        font-weight: 500;
+
+        letter-spacing: 2px;
+
+      }
+
+      .heading-secondary {
+
+        font-weight: 600;
+
+        font-size: 1.4em;
+
+        color: #ffffff;
+
+        background-color: #0f1730;
+
+        margin: 0.7em 0;
+
+        display: inline-block;
+
+        padding: 0 0.7em;
+
+        -webkit-transform: skew(-5deg);
+
+            -ms-transform: skew(-5deg);
+
+                transform: skew(-5deg);
+
+      }
+
+      .heading-secondary:before {
+
+        font-size: 1.25em;
+
+        content: "";
+
+        position: absolute;
+
+        width: 90vw;
+
+        height: 2px;
+
+        background-color: #0f1730;
+
+        bottom: 0;
+
+      }
+
+      .heading-secondary > a {
+
+        color: #ffffff;
+
+        display: inline-block;
+
+        padding: 0.25em;
+
+        text-decoration: none;
+
+      }
+
+      .page {
+
+        width: 94%;
+
+        margin: 0 3%;
+
+      }
+
+      .page:not(.page-1) {
+
+        display: none;
+
+      }
+
+      .page > p {
+
+        font-family: "Poppins", sans-serif;
+
+        color: #534f5e;
+
+        font-size: 1em;
+
+        letter-spacing: 0.05em;
+
+        line-height: 2em;
+
+        font-weight: 400;
+
+      }
+
+      .page img {
+
+        width: 98%;
+
+        -webkit-box-sizing: border-box;
+
+        box-sizing: border-box;
+
+        height: auto;
+
+        margin: 1.25em 1%;
+
+        -webkit-box-shadow: 0 0.62em 1.5em rgba(0, 64, 128, 0.2);
+
+        box-shadow: 0 0.62em 1.5em rgba(0, 64, 128, 0.2);
+
+        border: 0.62em solid white;
+
+        border-bottom-width: 1.12em;
+
+        border-top-width: 1.12em;
+
+        border-radius: 5px;
+
+      }
+
+      .button-box {
+
+        width: 94%;
+
+        height: 2.9em;
+
+        margin: 0 auto 2em auto;
+
+        position: relative;
+
+      }
+
+      .button-box > button {
+
+        background-color: #0f1730;
+
+        font-size: 1em;
+
+        font-weight: 600;
+
+        position: absolute;
+
+        border: none;
+
+        color: white;
+
+        cursor: pointer;
+
+        padding: 0.62em 2em;
+
+        outline: none;
+
+        border-radius: 2em;
+
+      }
+
+      .button-prev {
+
+        left: 0;
+
+      }
+
+      .button-next {
+
+        right: 0;
+
+      }
+
+      .yt-link {
+
+        width: 94%;
+
+        background-color: #4249ed;
+
+        padding: 0.8em 0;
+
+        margin: 0 3%;
+
+        text-align: center;
+
+        margin-bottom: 1.2em;
+
+        border-radius: 0.4em;
+
+      }
+
+      .yt-link > a {
+
+        color: white;
+
+        font-size: 1.25em;
+
+        font-weight: 600;
+
+        text-decoration: none;
+
+      }
+
+      @media screen and (max-width: 600px) {
+
+        body {
+
+          font-size: 14px;
+
+        }
+
+      }
