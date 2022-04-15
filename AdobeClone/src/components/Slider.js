@@ -1,10 +1,10 @@
 
 import React from 'react'
 
-const Slider = () => {
+const Slider = ({min,max,value,handleChange}) => {
   return (
     <div className='slider-container' >
-      <input type="range" name="" id="" className='slider' />
+      <input type="range" min={min} max={max} onChange={handleChange} value={value} name="" id="" className='slider' />
     </div>
   )
 }
